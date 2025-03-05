@@ -1,0 +1,158 @@
+:root {
+    --cherry-blossom-pink: hsla(342, 86%, 83%, 1);
+    --rose-pompadour: hsla(342, 78%, 70%, 1);
+    --celadon: hsla(126, 30%, 72%, 1);
+    --cambridge-blue: hsla(130, 23%, 64%, 1);
+    --cambridge-blue-2: hsla(128, 16%, 52%, 1);
+    --hunter-green: hsla(124, 18%, 31%, 1);
+    --eerie-black: hsla(130, 26%, 9%, 1);
+}
+
+@font-face {
+    font-family: "Tangerine bold";
+    src: url(assets/Tangerine-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Tangerine regular";
+    src: url(assets/Tangerine-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(assets/Lato-Black.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--cherry-blossom-pink);
+    padding: 0em;
+    margin: 0em;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(assets/bg-lj.webp);
+    background-size: 100vw 100vh;
+    font-family: "Lato";
+}
+
+h1[data-page="home"]{
+    animation: FadeInHeader 3s ease-in forwards;
+    color: var(--cherry-blossom-pink);
+    font-family: "Tangerine bold";
+    font-size: 10em;
+    text-align: center;
+    text-justify: center;
+    text-shadow: var(--cherry-blossom-pink) 1px 0 10px;
+    -webkit-text-stroke: 2px var(--rose-pompadour);
+}
+
+h1 {
+    color: var(--cherry-blossom-pink);
+    font-family: "Tangerine bold";
+    text-shadow: var(--cherry-blossom-pink) 1px 0 10px;
+    -webkit-text-stroke: 1px var(--rose-pompadour);
+}
+
+@keyframes FadeInHeader {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }    
+}
+
+nav {
+    bottom: 1em;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    right: 1em;
+    transition: opacity 3s ease-in-out;
+}
+
+nav.visible {
+    display: block;
+    opacity: 1;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;}
+
+li {
+    color: var(--cherry-blossom-pink);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Lato";
+    font-size: 1em;
+    list-style-type: "";
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    -webkit-text-stroke: 1px var(--rose-pompadour);
+}
+
+li ul {
+    display: none;
+    left: 0;
+    min-width: 100px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+}
+
+/* 
+    dropdown andere pages
+li:hover ul {
+    display: block;
+} */
+
+/* li ul li {
+    display: block;
+    padding: 10px;
+} */
+
+
+@media (min-width: 900px) {
+    h1 [data-page="home"] {
+        font-size: 25em;
+    }
+}
+
+/* notes pagina */
+
+body[class="overlay"] {
+    background-color: var(--eerie-black);
+    background-blend-mode: multiply;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+section a {
+    background-color: var(--rose-pompadour);
+    border-radius: 8px;
+    width: 15em;
+    height: 10em;
+}
+
+h3 {
+    text-align: center;
+    text-transform: capitalize;
+    padding: 3em;
+    color: white;
+}
