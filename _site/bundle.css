@@ -107,19 +107,21 @@ li ul {
     min-width: 100px;
     padding: 0;
     position: absolute;
-    top: 100%;
+    top: -5em;
 }
 
-/* 
-    dropdown andere pages
+
+    /* dropdown  */
 li:hover ul {
     display: block;
-} */
+    transition: 0.3s ease-in;
 
-/* li ul li {
+} 
+
+li ul li {
     display: block;
     padding: 10px;
-} */
+} 
 
 
 @media (min-width: 900px) {
